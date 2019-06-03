@@ -5,7 +5,7 @@
  */
 package videogames_shop.logic;
 import java.util.ArrayList;
-
+import videogames_shop.storage.order_repo;
 
 
 public class Client extends User 
@@ -65,7 +65,7 @@ public class Client extends User
     
     public Order CreateOrder (ArrayList<Product> list)
             {   
-                int id = DB_usage.getLastOrderId();
+                int id = order_repo.getInstance().getLastOrderId();
                 return new Order(id, list);
             }
     public void payForOrder(Order order)
