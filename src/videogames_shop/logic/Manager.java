@@ -4,14 +4,16 @@
  * and open the template in the editor.
  */
 package videogames_shop.logic;
+
 import videogames_shop.storage.product_repo;
 import videogames_shop.storage.exchange_repo;
 
+
 public class Manager extends User {
     
-    public Manager(String FirstName, String SurName,int id)
+    public Manager(String FirstName, String SurName,int id,String pass)
         {
-             super(FirstName,SurName,id);
+             super(FirstName,SurName,id,pass);
         }
     public String getFirstName()
             {
@@ -38,17 +40,27 @@ public class Manager extends User {
             {
                this.id=id;
             }
+     public  String getPass ()
+        {
+            return password;
+        }
+    
+    public  void setPass (String pass)
+        {
+            this.password=pass;
+        }
+    
     public void confirm_order (Order order)
         {
-            order.setStatus_confirmFromCustomer();
+            order.setStatus(Order_Status.AwaitMoneyTransfer);
         }
     public void give_away_order (Order order)
         {
-            order.setStatus_giveAway();
+            order.setStatus(Order_Status.ProductGivenAway);
         }
     public void close_order (Order order)
         {
-            order.setStatus_close();
+            order.setStatus(Order_Status.Closed);
         }
     public Exchange_process start_exchange ()
         {
@@ -57,6 +69,6 @@ public class Manager extends User {
     public void CloseExchange (Exchange_process exchange, Product product)
         {   
              product_repo.getInstance().decreaseQuantityProduct(product);
-             exchange.SetClosed();
+             exchange.SetStatus(Exchange_Status.Closed);
         }
 }

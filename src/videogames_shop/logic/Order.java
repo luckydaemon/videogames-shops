@@ -11,7 +11,6 @@ enum Order_Status
     AwaitConfirmationOfProductExistion,
     AwaitConfirmationFromCustomer,
     AwaitMoneyTransfer,
-    MoneyTransferDone,
     ProductGivenAway,
     Closed
 }
@@ -27,15 +26,15 @@ public class Order
     public Order (int id, ArrayList<Product> list)
         {
             this.id=id;
-            this.Cost = Cost_calc(list);
             this.ProductList = list;
+            this.Cost = Cost_calc();
             this.Status = Order_Status.AwaitConfirmationOfProductExistion;
         }
-    public float Cost_calc(ArrayList<Product> list)
+    public float Cost_calc()
         {   
             float cost=0;
-            for (int i = 0; i < list.size(); i++)
-                 cost+= list.get(i).getProductPrice();
+            for (int i = 0; i < this.ProductList.size(); i++)
+                 cost+= this.ProductList.get(i).getProductPrice();
             return cost;
         }  
     public float getOrderCost()
@@ -50,25 +49,8 @@ public class Order
         {
             return ProductList;
         }
-    public void setStatus_confirmExistion()
+    public void setStatus(Order_Status status)
         {
-            Status = Order_Status.AwaitConfirmationFromCustomer;
+            Status = status; 
         }
-     public void setStatus_confirmFromCustomer()
-        {
-            Status = Order_Status.AwaitMoneyTransfer;
-        }
-      public void setStatus_paid()
-        {
-            Status = Order_Status.MoneyTransferDone;
-        }
-      public void setStatus_giveAway()
-        {
-            Status = Order_Status.ProductGivenAway;
-        }
-      public void setStatus_close()
-        {
-            Status = Order_Status.Closed;
-        }
-
 }

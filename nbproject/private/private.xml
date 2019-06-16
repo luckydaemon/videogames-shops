@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/db/OrderMapper.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/storage/admin_repo.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/db/ClientMapper.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/GUI/User_Chose.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/Videogames_shop_test.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/storage/order_repo.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/storage/Client_repo.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/GUI/Client_Login.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/logic/Client.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/GUI/ClientOrder.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/logic/Product.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/storage/exchange_repo.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/db/ProductMapper.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/storage/product_repo.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/db/db_utils.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/storage/managaer_repo.java</file>
+            <file>file:/D:/Program_Files/projects/videogames_shop/src/videogames_shop/logic/Adminstrator.java</file>
+        </group>
+    </open-files>
+</project-private>

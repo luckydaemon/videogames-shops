@@ -55,5 +55,13 @@ public class Product {
         {
             this.quantity = quantity;
         }
+    public String getCategory()
+        {
+            return category;
+        }
+    public void setCategory(String category)
+        {
+            this.category = category;
+        }
     
 }

@@ -14,7 +14,7 @@ import videogames_shop.logic.Manager;
  */
 public class managaer_repo {
     private static managaer_repo instance;
-    private ArrayList<Manager> Managers;
+    private ArrayList<Manager> Managers  =  new ArrayList<>();
     private managaer_repo(){}
     public static managaer_repo getInstance()
     { 

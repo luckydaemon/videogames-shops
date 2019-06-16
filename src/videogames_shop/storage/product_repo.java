@@ -13,7 +13,7 @@ import videogames_shop.logic.Product;
  */
 public class product_repo {
     private static product_repo instance;
-    private ArrayList<Product> Products;
+    private ArrayList<Product> Products  =  new ArrayList<>();
     private product_repo(){}
     public static product_repo getInstance()
     { 

@@ -6,11 +6,13 @@
 package videogames_shop.logic;
 
 
+
+
 public class Adminstrator extends User 
 {
-    public Adminstrator (String FirstName, String SurName,int id)
+    public Adminstrator (String FirstName, String SurName,int id, String pass)
         {
-             super(FirstName,SurName,id);
+             super(FirstName,SurName,id,pass);
         }
     public String getFirstName()
             {
@@ -37,13 +39,23 @@ public class Adminstrator extends User
             {
                this.id=id;
             }
+    public  String getPass ()
+        {
+            return password;
+        }
+    
+    public  void setPass (String pass)
+        {
+            this.password=pass;
+        }
+    
     public void ConfirmExistanceOfProducts(Order order)
         {
-            order.setStatus_confirmExistion();
+            order.setStatus(Order_Status.AwaitConfirmationFromCustomer);
         }
     public void ExchangeProductTesting(Exchange_process exchange)
         {
-           exchange.SetStatusTesting();
+           exchange.SetStatus(Exchange_Status.ProductTesting);
         }
     public void ExchangeWorkingStatus(Exchange_process exchange, boolean status)
         {
@@ -59,7 +71,7 @@ public class Adminstrator extends User
         }
     public void SetAwaitStatus(Exchange_process exchange)
         {
-            exchange.SetAwaitGameExchange();
+            exchange.SetStatus(Exchange_Status.AwaitGameExchange);
         }
     
 }

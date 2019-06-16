@@ -13,7 +13,7 @@ import videogames_shop.logic.Exchange_process;
  */
 public class exchange_repo {
     private static exchange_repo instance;
-    private ArrayList<Exchange_process> exchanges;
+    private ArrayList<Exchange_process> exchanges  =  new ArrayList<>();
     private exchange_repo(){}
     public static exchange_repo getInstance()
     { 

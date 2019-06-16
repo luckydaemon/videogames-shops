@@ -14,7 +14,7 @@ import videogames_shop.logic.Client;
  */
 public class Client_repo {
     private static Client_repo instance;
-    private ArrayList<Client> Clients;
+    private ArrayList<Client> Clients  =  new ArrayList<>();
     private Client_repo(){}
     public static Client_repo getInstance()
     { 

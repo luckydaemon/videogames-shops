@@ -26,21 +26,9 @@ public class Exchange_process {
             this.cost = 0;
             this.Status = Exchange_Status.ProductRecevied;
         }
-    public void SetStatusTesting()
+    public void SetStatus(Exchange_Status status)
         {
-            this.Status = Exchange_Status.ProductTesting;
-        }
-    public void SetGivenCategoryAndPrice()
-        {
-            this.Status = Exchange_Status.ProductGivenCategoryAndPrice;
-        }
-    public void SetAwaitGameExchange()
-        {
-            this.Status = Exchange_Status.AwaitGameExchange;
-        }
-    public void SetClosed()
-        {
-            this.Status = Exchange_Status.Closed;
+            this.Status = status;
         }
     public void SetWorkingStatus(boolean status)
         {

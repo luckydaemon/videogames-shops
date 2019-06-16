@@ -14,9 +14,9 @@ public class Client extends User
     private String TeleNumber;
     private String Email;
     
-    public Client (String FirstName, String SurName,int id, String TeleNumber, String Email)
+    public Client (String FirstName, String SurName,int id, String TeleNumber, String Email, String pass)
            {    
-              super(FirstName,SurName,id);
+              super(FirstName,SurName,id,pass);
               this.TeleNumber = TeleNumber;
               this.Email = Email;
            }
@@ -52,24 +52,27 @@ public class Client extends User
             {
                 this.Email = Email;
             }
-    
     public int getID ()
             {
                 return id;
             }
-    
     public  void setID (int id)
             {
                this.id=id;
             }
+     public  String getPass ()
+        {
+            return password;
+        }
+    
+    public  void setPass (String pass)
+        {
+            this.password=pass;
+        }
     
     public Order CreateOrder (ArrayList<Product> list)
             {   
                 int id = order_repo.getInstance().getLastOrderId();
                 return new Order(id, list);
-            }
-    public void payForOrder(Order order)
-            {
-                order.setStatus_paid();
             }
 }

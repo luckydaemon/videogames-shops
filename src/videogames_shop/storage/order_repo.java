@@ -14,7 +14,7 @@ import videogames_shop.logic.Order;
  */
 public class order_repo {
         private static order_repo instance;
-    private ArrayList<Order> orders;
+    private ArrayList<Order> orders  =  new ArrayList<>();
     private order_repo(){}
     public static order_repo getInstance()
     { 
@@ -27,14 +27,13 @@ public class order_repo {
         {
             orders.add(order);
         }
-        public ArrayList<Order> getOrders() 
+    public ArrayList<Order> getOrders() 
     {
         return  orders;
     }
     public  int getLastOrderId()
                {
-                   Order lastorder = orders.get(orders.size() - 1);
-                   return  lastorder.getOrderId();
+                   return  orders.size();
                } 
     public Order FindOrderById(int id)
             {   
